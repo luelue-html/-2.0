@@ -1,0 +1,84 @@
+  .login{
+    width: 410px;
+    height: 398px;
+    border: 1px solid #000;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 101;
+    margin: -255px 0 0 -205px;
+    background-color: #fff;
+    padding-top: 32px;
+    display:none;
+  }
+  .login .x{
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    color: #d4cecd;
+    cursor: pointer;
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+  }
+  .tdz{
+      margin: 0 0 50px 58px;
+      font-size: 20px;
+      color: #d4cecd;
+  }
+  .tdzs{
+      margin: 0 58px;
+  }
+  .user{
+      width: 305px;
+      height: 38px;
+      border: 1px solid #d4cecd;
+      margin: 0 0 20px 58px;
+      padding-left: 5px;
+  }
+  .pass{
+    width: 305px;
+      margin: 0 0 20px 58px;
+      height: 38px;
+      padding-left: 5px;
+      border: 1px solid #b4a078;
+      
+}
+    .btn{
+       margin-left: 58px;
+       float: left; 
+        width: 130px;
+        height: 50px;
+        background: #b4a078;
+        color: white;
+        border: none;
+        margin-right: 50px;
+        cursor: pointer;
+        outline: none;
+    }
+    .but{
+        float: left;
+        width: 130px;
+        height: 50px;
+        background: #b4a078;
+        border: none;
+        color: white;
+        outline: none;
+        cursor: pointer;
+    }
+    .btn:hover{
+        color: #000;
+    }
+    .but:hover{
+        color: #000;
+    }
+  .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+  }

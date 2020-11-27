@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font: 16px "微软雅黑",Arial; }
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: normal;
+  font-size: 100%; }
+
+i, em {
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #555555;
+  text-decoration: none; }
+
+input {
+  outline: none; }
+
+.clearfix {
+  /* 清除浮动 */
+  *zoom: 1; }
+
+.clear::after {
+  content: "";
+  /*万能清除浮动 */
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+img {
+  vertical-align: middle; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../font/iconfont.eot");
+  /* IE9*/
+  src: url("../font/iconfont.eot?t=1460369308#iefix") format("embedded-opentype"), url("../font/iconfont.woff?t=1460369308") format("woff"), url("../font/iconfont.ttf?t=1460369308") format("truetype"), url("../font/iconfont.svg?t=1460369308#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 0.16rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-homefill:before {
+  content: "\e6bb"; }
+
+.icon-camerafill:before {
+  content: "\e664"; }
+
+.icon-search:before {
+  content: "\e65c"; }
+
+.icon-peoplefill:before {
+  content: "\e735"; }
+
+.icon-tuichu:before {
+  content: "\e603"; }
+
+.icon-fanhuidingbu:before {
+  content: "\e66f"; }

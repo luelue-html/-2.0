@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/xq.css">
+</head>
+<body>
+   <div class="header">
+      <div class="outer banxin1">
+        <a href="#" class="tz">关于防止近期不法分子冒充客服实施诈骗的公告</a>
+          <div class="ty">
+            <ul>
+              <li><a href="#">登录/注册</a></li>
+              <li><a href="#">我的订单</a></li>
+              <li><a href="#">会员</a></li>
+              <li><a href="#">甄选家</a></li>
+              <li><a href="#" class="xial1">企业采购</a></li>
+              <li><a href="#" class="xial2">客户服务</a></li>
+              <li><a href="#" class="shj">APP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="der banxin2">
+        <div class="slog"><a href="#">网易严选</a></div>
+        <div class="ss">
+          <form action="">
+          <input type="text" placeholder="9.9元超值专区">
+          <button>搜索</button>
+        </form>
+        <a href="./goodsCart.html" class="gwc">购物车
+          <span class="bq">0</span>
+        </a>
+        </div>
+        <div class="new">
+          <ul>
+            <li class="li1"><a href="#" class="new1">首页</a></li>
+           
+            <li><a href="#" id="newa">居家生活</a>
+              <div class="xldk">
+                <div class="xlnr">
+                  <h2>口碑好物</h2>
+                  <p><a href="./xqliebiao.html" class="xla"><img src="https://yanxuan.nosdn.127.net/0dd4db7175684809f98db4a172568c22.jpg?quality=95&type=webp&imageView" alt="">口碑好物</a></p>
+                </div>
+                <div class="xlnr">
+                  <h2>口碑好物</h2>
+                  <p><a href="" class="xla"><img src="https://yanxuan.nosdn.127.net/0dd4db7175684809f98db4a172568c22.jpg?quality=95&type=webp&imageView" alt="">口碑好物</a></p>
+                </div>
+              </div>
+              
+            </li>
+
+            <li><a href="#" id="newa">服饰鞋包</a></li>
+            <li><a href="#" id="newa">美食酒水</a></li>
+            <li><a href="#" id="newa">个护清洁</a></li>
+            <li><a href="#" id="newa">母婴亲子</a></li>
+            <li><a href="#" id="newa">运动旅行</a></li>
+            <li><a href="#" id="newa">数码家电</a></li>
+            <li class="new9"><a href="#" id="newa">严选全球</a></li>
+            <li><a href="#" id="newa">为你严选</a></li>
+            <li class="li11"><a href="#" class="new11" id="newa">众筹</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="wrap">
+        <div class="main">
+            <div class="minBox">
+                <img src="https://yanxuan-item.nosdn.127.net/71cf7cbe253633d822da4a77844b9c95.png?type=webp&imageView&thumbnail=430x430&quality=95" alt="">
+                <div class="mask"></div>
+            </div>
+            <div class="content">
+                <img src="./img/xq.png" alt="">
+            </div>
+            <div class="maxBox">
+                <img src="https://yanxuan-item.nosdn.127.net/71cf7cbe253633d822da4a77844b9c95.png?type=webp&imageView&thumbnail=430x430&quality=95" alt="">
+            </div>
+            <div class="gm">
+                <div class="ljgm"><a href="https://i.taobao.com/my_taobao.htm?spm=a2e0b.20350158.754894437.1.1b47468aZClz0s&ad_id&am_id&cm_id&pm_id=1501036000a02c5c3739&pid=mm_15891853_2192459_8654707&union_lens=recoveryid%3A201_11.170.86.133_14238338_1606446683831%3Bprepvid%3A201_11.170.86.133_14238338_1606446683831&clk1=e7ea2e0f04a3b82053b2767a515dd4ba">立即购买</a></div>
+                <div class="jr"><a href="javascriput:;">加入购物车</a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/offset.js"></script>
+    <script>
+     var jR =  document.querySelector(".jr");
+     var gw = document.querySelector(".bq");
+     var flog = 0;
+     jR.onclick = function(){
+        alert("添加购物车成功，可点击查看")
+        flog++
+        gw.innerHTML = flog 
+      }
+
+        var minBox = document.querySelector('.minBox');
+        var mask = document.querySelector('.mask');
+        var maxBox = document.querySelector('.maxBox');
+        var maxImg = document.querySelector('.maxBox img');
+
+        //鼠标移动，mask跟着移动
+        minBox.onmousemove = function(eve){
+                var e = eve || event;
+                //计算msk的的定位坐标
+                var maskLeft = e.clientX - offset(minBox).left - mask.clientWidth / 2;
+                var maskTop = e.clientY - offset(minBox).top - mask.clientHeight / 2;
+                //限制mask移动范围
+                console.log(maskLeft,maskTop);
+                if( maskLeft < 0){
+                  maskLeft = 0;
+                }
+                if(maskLeft >= (minBox.clientWidth - mask.clientWidth)){
+                  maskLeft = minBox.clientWidth - mask.clientWidth;
+                }
+                if( maskTop < 0){
+                  maskTop = 0;
+                }
+                if(maskTop >= (minBox.clientHeight - mask.clientHeight)){
+                  maskTop = minBox.clientHeight - mask.clientHeight;
+                }
+                
+                console.log(maskLeft,maskTop);
+                //然后赋值
+                mask.style.left = maskLeft + "px";
+                mask.style.top = maskTop + "px";
+
+                //得到移动的比例
+                var scaleX = maskLeft/(minBox.clientWidth - mask.clientWidth);
+                var scaleY = maskTop/(minBox.clientHeight - mask.clientHeight);
+
+                //大图跟着移动
+                maxImg.style.left = -scaleX*(maxImg.clientWidth-maxBox.clientWidth) + "px";
+                maxImg.style.top = -scaleY*(maxImg.clientHeight-maxBox.clientHeight) + "px";
+                //大图移动的距离是大图乘以小图移动的百分比...
+            }
+
+            minBox.onmouseenter = function (){
+            mask.style.display = 'block'
+            maxBox.style.display = 'block'
+            }
+            minBox.onmouseleave = function (){
+            mask.style.display = 'none'
+            maxBox.style.display = 'none'
+            }
+    </script>
+
+
+
+</body>
+</html>
